@@ -9,12 +9,15 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.quarkus:quarkus-spring-security'
+    implementation 'io.quarkus:quarkus-spring-di'
     implementation 'io.quarkus:quarkus-spring-boot-properties'
     implementation 'io.quarkus:quarkus-spring-web'
     implementation 'io.quarkus:quarkus-amazon-lambda-http'
     implementation 'io.quarkus:quarkus-amazon-lambda'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-resteasy'
+
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'

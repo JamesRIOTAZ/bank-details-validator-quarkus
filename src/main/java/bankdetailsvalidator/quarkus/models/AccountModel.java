@@ -1,10 +1,15 @@
 package bankdetailsvalidator.quarkus.models;
 
+import bankdetailsvalidator.quarkus.constraint.ValidAccountNumber;
+import bankdetailsvalidator.quarkus.constraint.ValidSortCode;
+
 public class AccountModel {
     public static final int ACCOUNT_NUMBER_LENGTH = 8;
 
+    @ValidAccountNumber
     private String accountNumber;
 
+    @ValidSortCode
     private String sortCode;
 
     public String getAccountNumber() {
